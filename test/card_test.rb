@@ -27,8 +27,16 @@ describe Card do
       # Test to ensure that to_s works for cards values 2-10
       # for example:  "2 of diamonds"
       card = Card.new(2,:diamonds)
-      #expect
       expect(card.to_s).must_equal "2 of diamonds"
+
+      card = Card.new(10,:clubs)
+      expect(card.to_s).must_equal "10 of clubs"
+
+      card = Card.new(7,:spades)
+      expect(card.to_s).must_equal "7 of spades"
+
+      card =Card.new(5,:hearts)
+      expect(card.to_s).must_equal "5 of hearts"
     end
 
     it "to_s returns a readable String value for Ace, Jack, Queen, King" do
